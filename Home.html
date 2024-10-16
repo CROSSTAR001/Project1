@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="games-library.html">Games Library</a></li>
+                <li><a href="trending-games.html">Trending Games</a></li> 
+                <li><a href="upcoming-releases.html">Upcoming Releases</a></li>
+                <li><a href="awards-top-games.html">Awards & Top Games</a></li>
+                <li><a href="gaming-news.html">Gaming News</a></li>
+                <li><a href="game-systems.html">Game Systems</a></li> 
+                <li><a href="history-of-gaming.html">History of Gaming</a></li> 
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="welcome">
+            <h1>Welcome to Game Zone</h1>
+            <p>Your one-stop shop for gaming news, recommendations, and more.</p>
+            <p>Hello, <span id="username"></span>!</p>
+        </section>
+    </main>
+
+    <script>
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'login.html'; 
+        } else {
+            document.getElementById('username').textContent = localStorage.getItem('username');
+        }
+    </script>
+</body>
+</html>
